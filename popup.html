@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <div class="header">
+      <img src="icons/icon128.png" alt="Icon" class="header-icon" />
+      <h1 class="header-title">BetaBlock Settings</h1>
+    </div>
+    <style>
+      .collapsible {
+        background-color: #eee;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: center; /* Center text */
+        outline: none;
+        font-size: 15px;
+        font-weight: bold; /* Make text bold */
+        display: block; /* Optional: Ensure it takes the full width */
+      }
+
+      .collapsible .collapsible-icon {
+    margin-right: 5px; /* Space between the icon and the text */
+}
+
+.collapsible:after {
+    content: '+'; /* Default icon */
+    margin-right: 5px;
+}
+
+.collapsible.active:after {
+    content: '-'; /* Icon when the section is expanded */
+}
+
+
+      .active,
+      .collapsible:hover {
+        background-color: #ccc;
+      }
+      .header {
+        display: flex;
+        align-items: center;
+      }
+
+      .header-icon {
+        width: 30px; /* Adjust as needed */
+        height: 30px; /* Adjust as needed */
+        margin-right: 10px;
+      }
+
+      .header-title {
+        font-size: 20px; /* Decreased font size */
+        margin: 0; /* Remove default margin */
+      }
+      .content {
+        padding: 0 18px;
+        display: none;
+        overflow: hidden;
+        background-color: #f1f1f1;
+      }
+      /* The switch - the box around the slider */
+      .switch {
+        position: relative;
+        display: block;
+        width: 40px;
+        height: 22px;
+      }
+
+      /* Hide default HTML checkbox */
+      .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+
+      /* The slider */
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+      }
+
+      .slider:before {
+        position: absolute;
+        content: "";
+        height: 18px;
+        width: 18px;
+        left: 2px;
+        bottom: 2px;
+        background-color: white;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+      }
+
+      input:checked + .slider {
+        background-color: #2196f3;
+      }
+
+      input:focus + .slider {
+        box-shadow: 0 0 1px #2196f3;
+      }
+
+      input:checked + .slider:before {
+        -webkit-transform: translateX(19px);
+        -ms-transform: translateX(19px);
+        transform: translateX(19px);
+      }
+
+      /* Rounded sliders */
+      .slider.round {
+        border-radius: 34px;
+      }
+
+      .slider.round:before {
+        border-radius: 50%;
+      }
+
+      .slider-text {
+        text-align: center;
+        padding-top: 5px;
+      }
+
+.switch-container {
+    display: flex;
+    align-items: center; /* Aligns items vertically in the center */
+    justify-content: flex-start; /* Aligns items to the start (left) */
+    margin-bottom: 10px; /* Adds some space between each row */
+}
+
+
+.switch {
+    margin-right: 10px; /* Adds some space between the switch and the text */
+}
+
+
+      body {
+        width: 300px; /* Adjust to your preference */
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- 8a.nu Section -->
+    <button class="collapsible"><span class="collapsible-icon"></span> 8a.nu Options</button>
+    <div class ="content">
+    <div class="switch-container">
+      <label class="switch">
+        <input type="checkbox" id="toggle-8anu" />
+        <span class="slider round"></span>
+      </label>
+      <div class="slider-text">Hide Ascent Notes</div>
+    </div>
+      <div class="switch-container">
+      <label class="switch">
+        <input type="checkbox" id="toggle-8anu-news" />
+        <span class="slider round"></span>
+      </label>
+      <div class="slider-text">Hide News</div>
+    </div>
+</div>
+    <!-- Mountain Project Section -->
+    <button class="collapsible"><span class="collapsible-icon"></span>Mountain Project Options</button>
+    <div class ="content">
+    <div class="switch-container">
+      <label class="switch">
+        <input type="checkbox" id="toggle-mp-desc" />
+        <span class="slider round"></span>
+      </label>
+      <div class="slider-text">Hide Description</div>
+    </div>
+    <div class="switch-container">
+      <label class="switch">
+        <input type="checkbox" id="toggle-mp-comments" />
+        <span class="slider round"></span>
+      </label>
+      <div class="slider-text">Hide Comments</div>
+    </div>
+    <div class="switch-container">
+      <label class="switch">
+        <input type="checkbox" id="toggle-mp-photos" />
+        <span class="slider round"></span>
+      </label>
+      <div class="slider-text">Hide Photos</div>
+    </div>
+    <div class="switch-container">
+      <label class="switch">
+        <input type="checkbox" id="toggle-mp-ticks" />
+        <span class="slider round"></span>
+      </label>
+      <div class="slider-text">Hide Ticks</div>
+      </div>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

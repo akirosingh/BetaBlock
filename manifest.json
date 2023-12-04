@@ -3,7 +3,7 @@
     "name": "BetaBlock",
     "version": "1.0",
     "description": "A Chrome extension to censor climbing beta on websites like Mountain Project and 8a.nu.",
-    "permissions": ["storage", "activeTab"],
+    "permissions": ["storage"],
     "action": {
       "default_popup": "popup.html",
       "default_icon": {
